@@ -12,7 +12,7 @@ const JSONGrid: React.FC<JSONGridProps> = ({
   onExpand = (keyPath: any) => { },
   expandByClickTitle = false,
   highlightSelected = true,
-  searchText = '',
+  searchText,
   theme = "default",
   customTheme = {},
 }) => {

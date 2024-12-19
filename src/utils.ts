@@ -35,7 +35,7 @@ export function lookup(obj: any, searchText: string) {
   else return null;
 }
 
-export function matchesText(obj: any, searchText: string) {
+export function matchesText(obj: any, searchText?: string) {
   if (searchText == null) return false;
   return String(obj).toLowerCase().includes(searchText.toLowerCase());
 }

@@ -50,5 +50,5 @@ export interface NestedGridProps {
   setHighlightedElement: (element: HTMLElement | null) => void;
   defaultExpandDepth: number;
   defaultExpandKeyTree: JSONObject;
-  searchText: string;
+  searchText?: string;
 }
