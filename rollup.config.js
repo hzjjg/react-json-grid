@@ -5,7 +5,6 @@ import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import postcss from "rollup-plugin-postcss";
 import url from "@rollup/plugin-url";
-import { dts } from "rollup-plugin-dts";
 
 import pkg from "./package.json";
 
@@ -38,12 +37,15 @@ export default {
         react: "React",
       },
     },
-    { file: "dist/index.d.ts", format: "es" }
   ],
   plugins: [
     external(),
-    dts(),
-    typescript(),
+    typescript({
+      declaration: true,
+      declarationDir: "dist/types",
+      emitDeclarationOnly: true,
+      rootDir: "src",
+    }),
     postcss({
       autoModules: false,
       modules: {
