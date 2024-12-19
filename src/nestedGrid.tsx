@@ -202,11 +202,13 @@ const NestedJSONGrid = (props: NestedGridProps) => {
 
     return (
       <div className={styles.box}>
-        <span className={styles.plusminus} onClick={toggleOpenStatus} data-clickable="true">
-          <Triangle className={open ? styles.expandicon + ' expanded' : styles.expandicon} size={10} />
-        </span>
-        <span className={styles.title} onClick={expandByClickTitle ? toggleOpenStatus : () => { }}>
-          {dataKey}&nbsp;{Array.isArray(data) ? `[${data.length}]` : "{...}"}
+        <span className={styles.title_wrapper}>
+          <span className={styles.expand} onClick={toggleOpenStatus} data-clickable="true">
+            <Triangle className={open ? styles.expand_icon + ' expanded' : styles.expand_icon} size={10} />
+          </span>
+          <span className={styles.title} onClick={expandByClickTitle ? toggleOpenStatus : () => { }}>
+            {dataKey}&nbsp;{Array.isArray(data) ? `[${data.length}]` : "{...}"}
+          </span>
         </span>
         {open && renderTable(data, level, allObjects, keys)}
       </div>

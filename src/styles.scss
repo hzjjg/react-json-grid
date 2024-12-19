@@ -97,16 +97,18 @@
     vertical-align: top;
   }
 
-  .title {
-    font-weight: bold;
-    padding-left: 6px;
+  .title_wrapper {
+    display: flex;
+    align-items: center;
   }
 
-  .plusminus {
-    font-size: 15px;
+  .title {
     font-weight: bold;
+  }
+
+  .expand {
     cursor: pointer;
-    margin-right: 2px;
+    margin-right: 6px;
   }
 
   .search-highlight {
@@ -116,7 +118,7 @@
     border-radius: 2px;
   }
 
-  .expandicon {
+  .expand_icon {
     fill: var(--jg-table-icon-color);
     stroke: var(--jg-table-icon-color);
     transform: rotate(90deg);
