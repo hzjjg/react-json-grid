@@ -1,8 +1,8 @@
-interface JSONObject {
+export interface JSONObject {
   [key: string]: any;
 }
 
-interface Theme {
+export interface Theme {
   bgColor?: string;
   borderColor?: string;
   selectHighlightBgColor?: string;
@@ -18,18 +18,18 @@ interface Theme {
   searchHighlightBgColor?: string;
 }
 
-interface Themes {
+export interface Themes {
   [key: string]: Theme;
 }
 
-type keyPathNode = string | string[] | number | number[];
+export type KeyPathNode = string | string[] | number | number[];
 
-interface JSONGridProps {
+export interface JSONGridProps {
   data: JSONObject;
   defaultExpandDepth?: number;
   defaultExpandKeyTree?: JSONObject;
-  onSelect?: (keyPath: keyPathNode[]) => void;
-  onExpand?: (keyPath: keyPathNode[]) => void;
+  onSelect?: (keyPath: KeyPathNode[]) => void;
+  onExpand?: (keyPath: KeyPathNode[]) => void;
   expandByClickTitle?: boolean;
   highlightSelected?: boolean;
   searchText?: string;
@@ -37,15 +37,15 @@ interface JSONGridProps {
   customTheme?: Theme;
 }
 
-interface NestedGridProps {
+export interface NestedGridProps {
   level: number;
-  keyPath: keyPathNode[];
+  keyPath: KeyPathNode[];
   dataKey?: string;
   data: JSONObject;
   highlightedElement: HTMLElement | null;
   highlightSelected: boolean;
-  onSelect: (keyPath: keyPathNode[]) => void;
-  onExpand: (keyPath: keyPathNode[]) => void;
+  onSelect: (keyPath: KeyPathNode[]) => void;
+  onExpand: (keyPath: KeyPathNode[]) => void;
   expandByClickTitle: boolean;
   setHighlightedElement: (element: HTMLElement | null) => void;
   defaultExpandDepth: number;

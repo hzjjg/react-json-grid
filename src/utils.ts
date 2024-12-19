@@ -1,4 +1,5 @@
 import themes from "./themes";
+import { JSONGridProps, JSONObject, Theme } from "./types";
 
 function isObject(obj: any) {
   return typeof obj === "object" && !Array.isArray(obj) && obj !== null;

@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./styles.scss";
 import { lookup, mergeKeyTrees, validateProps, getThemeStyles } from "./utils";
 import NestedJSONGrid from "./nestedGrid";
+import { JSONGridProps } from "./types";
 
-const JSONGrid: React.FC<any> = ({
+const JSONGrid: React.FC<JSONGridProps> = ({
   data,
   defaultExpandDepth = 0,
   defaultExpandKeyTree = {},
@@ -14,7 +15,7 @@ const JSONGrid: React.FC<any> = ({
   searchText = '',
   theme = "default",
   customTheme = {},
-}: JSONGridProps ) => {
+}) => {
   const [highlightedElement, setHighlightedElement] = useState<HTMLElement | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
 

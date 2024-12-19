@@ -1,6 +1,6 @@
 {
   "name": "@hzjjg/react-json-grid",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "React Component that converts JSON to nested grid tables.",
   "author": "Huzaifa Khilawala",
   "license": "MIT",
@@ -24,6 +24,7 @@
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "browser": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -74,6 +75,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rollup": "^4.22.4",
+    "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-scss": "^4.0.0",

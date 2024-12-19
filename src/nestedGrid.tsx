@@ -2,6 +2,7 @@ import React, { useState, Fragment } from "react";
 import styles from "./styles.scss";
 import { classnames, matchesText, checkAllObjects } from "./utils";
 import { Triangle } from './icons'
+import { JSONObject, KeyPathNode, NestedGridProps } from "./types";
 
 const NestedJSONGrid = (props: NestedGridProps) => {
   const {
@@ -30,7 +31,7 @@ const NestedJSONGrid = (props: NestedGridProps) => {
     )
       return;
 
-    let nextKeyPath: keyPathNode[] = [];
+    let nextKeyPath: KeyPathNode[] = [];
     let nextHighlightElement: HTMLElement | null = currentTarget;
 
     if (highlightedElement != null) highlightedElement.classList.remove(styles.highlight);
@@ -72,7 +73,7 @@ const NestedJSONGrid = (props: NestedGridProps) => {
     onSelect(keyPath.concat(nextKeyPath));
   };
 
-  const renderValue = (key: string, value: any, level: number, keyTree: JSONObject, nextKeyPath: keyPathNode[]) => {
+  const renderValue = (key: string, value: any, level: number, keyTree: JSONObject, nextKeyPath: KeyPathNode[]) => {
     if (value && typeof value === "object")
       return (
         <td className={classnames(styles.obj, styles.value)} onClick={highlight} data-clickable="true" key={key}>

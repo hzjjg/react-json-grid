@@ -1,3 +1,5 @@
+import { Themes } from "./types";
+
 const themes: Themes = {
   default: {
     bgColor: "#222",
