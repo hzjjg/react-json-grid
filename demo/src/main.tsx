@@ -103,10 +103,12 @@ const App: React.FC = () => {
       <JSONGrid
         data={data}
         searchText={"Clair"}
-        onSelect={(keyPath: any) => console.log(keyPath)}
+        onSelect={(keyPath: any) => console.log('onSelect', keyPath)}
+        onExpand={(keyPath: any) => console.log('onExpand', keyPath)}
         theme={"moonLight"}
         customTheme={{ tableIconColor: "#e4e4e4" }}
         defaultExpandKeyTree={keyTree}
+        expandByClickTitle={true}
       />
     </div>
   );

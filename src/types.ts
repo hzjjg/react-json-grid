@@ -29,6 +29,8 @@ interface JSONGridProps {
   defaultExpandDepth?: number;
   defaultExpandKeyTree?: JSONObject;
   onSelect?: (keyPath: keyPathNode[]) => void;
+  onExpand?: (keyPath: keyPathNode[]) => void;
+  expandByClickTitle?: boolean;
   highlightSelected?: boolean;
   searchText?: string;
   theme?: string;
@@ -43,6 +45,8 @@ interface NestedGridProps {
   highlightedElement: HTMLElement | null;
   highlightSelected: boolean;
   onSelect: (keyPath: keyPathNode[]) => void;
+  onExpand: (keyPath: keyPathNode[]) => void;
+  expandByClickTitle: boolean;
   setHighlightedElement: (element: HTMLElement | null) => void;
   defaultExpandDepth: number;
   defaultExpandKeyTree: JSONObject;

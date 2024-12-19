@@ -84,6 +84,8 @@ export function validateProps({
   defaultExpandDepth,
   defaultExpandKeyTree,
   onSelect,
+  onExpand,
+  expandByClickTitle,
   highlightSelected,
   searchText,
   theme,
@@ -103,6 +105,13 @@ export function validateProps({
   if (onSelect && typeof onSelect !== "function") {
     throw new Error("JSONGrid: onSelect prop must be a function");
   }
+  if (onExpand && typeof onExpand !== "function") {
+    throw new Error("JSONGrid: onExpand prop must be a function");
+  }
+  if (expandByClickTitle && typeof expandByClickTitle !== "boolean") {
+    throw new Error("JSONGrid: expandByClickTitle prop must be a boolean");
+  }
+
   if (highlightSelected && typeof highlightSelected !== "boolean") {
     throw new Error("JSONGrid: highlightSelected prop must be a boolean");
   }

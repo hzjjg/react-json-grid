@@ -7,12 +7,14 @@ const JSONGrid: React.FC<any> = ({
   data,
   defaultExpandDepth = 0,
   defaultExpandKeyTree = {},
-  onSelect = (keyPath: any) => {},
+  onSelect = (keyPath: any) => { },
+  onExpand = (keyPath: any) => { },
+  expandByClickTitle = false,
   highlightSelected = true,
-  searchText,
+  searchText = '',
   theme = "default",
   customTheme = {},
-}) => {
+}: JSONGridProps ) => {
   const [highlightedElement, setHighlightedElement] = useState<HTMLElement | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -33,11 +35,12 @@ const JSONGrid: React.FC<any> = ({
       defaultExpandDepth,
       defaultExpandKeyTree,
       onSelect,
+      onExpand,
       highlightSelected,
       searchText,
       theme
     });
-  }, [data, defaultExpandDepth, onSelect, highlightSelected, searchText, theme]);
+  }, [data, defaultExpandDepth, onSelect, onExpand, highlightSelected, searchText, theme]);
 
   const themeStyles = getThemeStyles(customTheme, theme);
 
@@ -54,6 +57,8 @@ const JSONGrid: React.FC<any> = ({
         highlightedElement={highlightedElement}
         highlightSelected={highlightSelected}
         onSelect={onSelect}
+        onExpand={onExpand}
+        expandByClickTitle={expandByClickTitle}
         setHighlightedElement={setHighlightedElement}
         defaultExpandDepth={defaultExpandDepth}
         defaultExpandKeyTree={mergedKeyTree}

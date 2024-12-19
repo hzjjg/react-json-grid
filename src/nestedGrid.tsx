@@ -11,6 +11,8 @@ const NestedJSONGrid = (props: NestedGridProps) => {
     highlightedElement,
     highlightSelected,
     onSelect,
+    onExpand,
+    expandByClickTitle,
     setHighlightedElement,
     defaultExpandDepth,
     defaultExpandKeyTree,
@@ -81,6 +83,8 @@ const NestedJSONGrid = (props: NestedGridProps) => {
             highlightedElement={highlightedElement}
             highlightSelected={highlightSelected}
             onSelect={onSelect}
+            onExpand={onExpand}
+            expandByClickTitle={expandByClickTitle}
             setHighlightedElement={setHighlightedElement}
             defaultExpandDepth={defaultExpandDepth}
             defaultExpandKeyTree={keyTree && keyTree[key]}
@@ -164,14 +168,14 @@ const NestedJSONGrid = (props: NestedGridProps) => {
               )}
               {allObjects
                 ? keys.map((nestedKey: string) =>
-                    renderValue(
-                      nestedKey,
-                      data[key][nestedKey],
-                      level,
-                      defaultExpandKeyTree && defaultExpandKeyTree[key],
-                      [parseInt(key), nestedKey]
-                    )
+                  renderValue(
+                    nestedKey,
+                    data[key][nestedKey],
+                    level,
+                    defaultExpandKeyTree && defaultExpandKeyTree[key],
+                    [parseInt(key), nestedKey]
                   )
+                )
                 : renderValue(key, data[key], level, defaultExpandKeyTree, [key])}
             </tr>
           ))}
@@ -185,12 +189,21 @@ const NestedJSONGrid = (props: NestedGridProps) => {
   if (level !== 0) {
     const [open, setOpen] = useState<boolean>(Boolean(level <= defaultExpandDepth || defaultExpandKeyTree));
 
+    const toggleOpenStatus = () => {
+      if (!open) {
+        onExpand(keyPath);
+        setOpen(true)
+      } else {
+        setOpen(false)
+      }
+    }
+
     return (
       <div className={styles.box}>
-        <span className={styles.plusminus} onClick={() => setOpen(!open)} data-clickable="true">
+        <span className={styles.plusminus} onClick={toggleOpenStatus} data-clickable="true">
           {open ? "[-]" : "[+]"}
         </span>
-        <span className={styles.title}>
+        <span className={styles.title} onClick={expandByClickTitle ? toggleOpenStatus : () => { }}>
           {dataKey}&nbsp;{Array.isArray(data) ? `[${data.length}]` : "{}"}
         </span>
         {open && renderTable(data, level, allObjects, keys)}
