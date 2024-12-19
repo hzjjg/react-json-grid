@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import JSONGrid from "@redheadphone/react-json-grid";
+import JSONGrid from "@hzjjg/react-json-grid";
 
 const App: React.FC = () => {
   const data = {

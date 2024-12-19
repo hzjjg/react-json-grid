@@ -1,12 +1,12 @@
 # React JSON Grid
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/RedHeadphone/react-json-grid/refs/heads/master/images/github-banner.png">
+  <img src="https://raw.githubusercontent.com/hzjjg/react-json-grid/refs/heads/master/images/github-banner.png">
 </p>
 
 <p align="center">
   Interactive demos available below!<br>
-  <a href="https://codepen.io/redheadphone/pen/rNoyrgW"><img alt="CodePen" src="https://img.shields.io/badge/CodePen-8A2BE2?logo=codepen"></a>
+  <a href="https://codepen.io/hzjjg/pen/rNoyrgW"><img alt="CodePen" src="https://img.shields.io/badge/CodePen-8A2BE2?logo=codepen"></a>
   <a href="https://codesandbox.io/s/react-json-grid-demo-7ymdg3"><img alt="CodeSandbox" src="https://img.shields.io/badge/CodeSandbox-4ea94b?logo=codesandbox"></a>
   <a href="https://stackblitz.com/edit/react-json-grid-7hyzqq"><img alt="Stackblitz" src="https://img.shields.io/badge/Stackblitz-blue?logo=stackblitz"></a>
 </p>
@@ -27,7 +27,7 @@ The library react-json-grid provides the React component JSONGrid, which is a us
 Run the following command in your React project directory:
 
 ```bash
-npm install @redheadphone/react-json-grid
+npm install @hzjjg/react-json-grid
 ```
 
 You can also use other package managers like `yarn` or `pnpm`, if preferred.
@@ -37,7 +37,7 @@ You can also use other package managers like `yarn` or `pnpm`, if preferred.
 Here's an example of how to use the react-json-grid library:
 
 ```jsx
-import JSONGrid from '@redheadphone/react-json-grid'
+import JSONGrid from '@hzjjg/react-json-grid'
 
 function ExampleComponent() {
   const data = {
@@ -112,7 +112,7 @@ The JSONGrid component supports the following props:
 - evaDark
 - moonLight
 
-Note: Pass one of above themes as a string in the theme prop. You can contribute your custom theme in [themes.js](https://github.com/RedHeadphone/react-json-grid/blob/master/src/themes.ts) if you want.
+Note: Pass one of above themes as a string in the theme prop. You can contribute your custom theme in [themes.js](https://github.com/hzjjg/react-json-grid/blob/master/src/themes.ts) if you want.
 
 ### Custom Theme Object Format
 

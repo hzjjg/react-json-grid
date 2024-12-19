@@ -1,4 +1,4 @@
-# Contributing to [react-json-grid](https://github.com/RedHeadphone/react-json-grid)
+# Contributing to [react-json-grid](https://github.com/hzjjg/react-json-grid)
 
 We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
 
@@ -22,16 +22,16 @@ To run & test react-json-grid, you need to follow a few simple steps (you can us
 
 1.  Fork the repository and clone the code to your local machine.
 2.  Run `npm install` in the repository root and demo directory.
-3.  Run `npm link` in the repository root. And then run `npm link @redheadphone/react-json-grid` in the demo directory.
+3.  Run `npm link` in the repository root. And then run `npm link @hzjjg/react-json-grid` in the demo directory.
 3.  Run the command `npm run dev` to start the development server for react-json-grid package. And run `npm run demo` to start the demo server at <http://localhost:5173>.
 
 ## Any contributions you make will be under the MIT Software License
 
 In short, when you submit changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit/) that covers the project. Feel free to contact the maintainers if that's a concern.
 
-## Report issues/bugs using GitHub's [issues](https://github.com/RedHeadphone/react-json-grid/issues)
+## Report issues/bugs using GitHub's [issues](https://github.com/hzjjg/react-json-grid/issues)
 
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/RedHeadphone/react-json-grid/issues/new/choose); it's that easy!
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/hzjjg/react-json-grid/issues/new/choose); it's that easy!
 
 ### Bug Reports
 
