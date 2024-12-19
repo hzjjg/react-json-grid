@@ -78,6 +78,8 @@ The JSONGrid component supports the following props:
 | defaultExpandDepth    | number   | The depth to which the grid is expanded by default.                   | 0             |
 | defaultExpandKeyTree  | object   | Tree-like structure with all keys that needs to be expanded.          | undefined     |
 | onSelect              | function | Event to obtain selected cell's keyPath                               | (keyPath)=>{} |
+| onExpand              | function | Event to obtain expanded cell's keyPath                               | (keyPath)=>{} |
+| expandByClickTitle    | boolean  | Whether to expand cell by clicking on nested object title or not.     | false         |
 | highlightSelected     | boolean  | Whether to highlight the selected cell or not.                        | true          |
 | searchText            | string   | The text that needs to be searched in the JSON data.                  | undefined     |
 | theme                 | string   | The theme name that needs to be applied.                              | 'default'     |
