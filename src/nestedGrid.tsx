@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from "react";
 import styles from "./styles.scss";
 import { classnames, matchesText, checkAllObjects } from "./utils";
+import { Triangle } from './icons'
 
 const NestedJSONGrid = (props: NestedGridProps) => {
   const {
@@ -201,10 +202,10 @@ const NestedJSONGrid = (props: NestedGridProps) => {
     return (
       <div className={styles.box}>
         <span className={styles.plusminus} onClick={toggleOpenStatus} data-clickable="true">
-          {open ? "[-]" : "[+]"}
+          <Triangle className={open ? styles.expandicon + ' expanded' : styles.expandicon} size={10} />
         </span>
         <span className={styles.title} onClick={expandByClickTitle ? toggleOpenStatus : () => { }}>
-          {dataKey}&nbsp;{Array.isArray(data) ? `[${data.length}]` : "{}"}
+          {dataKey}&nbsp;{Array.isArray(data) ? `[${data.length}]` : "{...}"}
         </span>
         {open && renderTable(data, level, allObjects, keys)}
       </div>

@@ -99,6 +99,7 @@
 
   .title {
     font-weight: bold;
+    padding-left: 6px;
   }
 
   .plusminus {
@@ -113,5 +114,16 @@
     padding: 1px 5px;
     padding-top: 0;
     border-radius: 2px;
+  }
+
+  .expandicon {
+    fill: var(--jg-table-icon-color);
+    stroke: var(--jg-table-icon-color);
+    transform: rotate(90deg);
+    transition: transform 0.15s;
+
+    &.expanded {
+      transform: rotate(180deg);
+    }
   }
 }
