@@ -191,6 +191,10 @@ const NestedJSONGrid = (props: NestedGridProps) => {
   if (level !== 0) {
     const [open, setOpen] = useState<boolean>(Boolean(level <= defaultExpandDepth || defaultExpandKeyTree));
 
+    useEffect(() => {
+      setOpen(Boolean(level <= defaultExpandDepth || defaultExpandKeyTree));
+    }, [defaultExpandDepth]);
+
     const toggleOpenStatus = () => {
       if (!open) {
         onExpand(keyPath);
