@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import styles from "./styles.scss";
 import { classnames, matchesText, checkAllObjects } from "./utils";
 import { Triangle } from './icons'
@@ -204,10 +204,10 @@ const NestedJSONGrid = (props: NestedGridProps) => {
       <div className={styles.box}>
         <span className={styles.title_wrapper}>
           <span className={styles.expand} onClick={toggleOpenStatus} data-clickable="true">
-            <Triangle className={open ? styles.expand_icon + ' expanded' : styles.expand_icon} size={10} />
+            <Triangle className={open ? styles.expand_icon + ' expanded' : styles.expand_icon} size={18} />
           </span>
           <span className={styles.title} onClick={expandByClickTitle ? toggleOpenStatus : () => { }}>
-            {dataKey}&nbsp;{Array.isArray(data) ? `[${data.length}]` : "{...}"}
+            {dataKey}&nbsp;{open ? "" : Array.isArray(data) ? `[${data.length}]` : "{...}"}
           </span>
         </span>
         {open && renderTable(data, level, allObjects, keys)}
