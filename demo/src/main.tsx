@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import JSONGrid from "@hzjjg/react-json-grid";
 
 const App: React.FC = () => {
-  const data = {
+
+  const [data, setData] = useState({
     "platformName": "E-Shop",
     "location": "Global",
     "established": 2023,
@@ -94,9 +95,13 @@ const App: React.FC = () => {
         "orders": []
       }
     ]
-  };
+  });
 
   const keyTree = { admin: true };
+
+  const [expandDepth, setExpandDepth] = useState(1);
+
+  (window as any).setExpandDepth = setExpandDepth;
 
   return (
     <div className="demo-container">
@@ -107,7 +112,8 @@ const App: React.FC = () => {
         onExpand={(keyPath: any) => console.log('onExpand', keyPath)}
         theme={"moonLight"}
         customTheme={{ tableIconColor: "#e4e4e4" }}
-        defaultExpandKeyTree={keyTree}
+        // defaultExpandKeyTree={keyTree}
+        defaultExpandDepth={expandDepth}
         expandByClickTitle={true}
       />
     </div>
