@@ -6,9 +6,7 @@
 
 <p align="center">
   Interactive demos available below!<br>
-  <a href="https://codepen.io/hzjjg/pen/rNoyrgW"><img alt="CodePen" src="https://img.shields.io/badge/CodePen-8A2BE2?logo=codepen"></a>
-  <a href="https://codesandbox.io/s/react-json-grid-demo-7ymdg3"><img alt="CodeSandbox" src="https://img.shields.io/badge/CodeSandbox-4ea94b?logo=codesandbox"></a>
-  <a href="https://stackblitz.com/edit/react-json-grid-7hyzqq"><img alt="Stackblitz" src="https://img.shields.io/badge/Stackblitz-blue?logo=stackblitz"></a>
+  <a href="https://stackblitz.com/edit/react-json-grid-7hyzqq-kreodheb"><img alt="Stackblitz" src="https://img.shields.io/badge/Stackblitz-blue?logo=stackblitz"></a>
 </p>
 
 
